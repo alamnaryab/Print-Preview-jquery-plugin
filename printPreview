@@ -4,7 +4,6 @@
         
         var opt = $.extend({
             obj2print:'body',
-            width: '470',
             style:'',
             width:'670',
             height:screen.height-105,
