@@ -47,6 +47,7 @@ write one more script tag without src attribute for our JQuery section to initia
             });
         });
   &lt;/script>
+  
 -----------------
 
 if you have "print Preview" button residing within the target object which we are printing, that button will not be displayed in print/preview.
