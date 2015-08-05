@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo Print Preview</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="printPreview.js"></script>
+<script type="text/javascript">
+        $(function(){
+            $("#btnPrint").printPreview({
+                obj2print:'#masterContent',
+                width:'810'
+            });
+        });
+    </script>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        font-family: arial;
+    }
+    body{
+        background: #EEE;
+    }
+    #header{
+        background: #666;
+        color:#FFF;
+        height:100px;
+        padding: 10px;
+    }
+    .clear{
+        clear:both;
+    }
+    #sideMenu{
+        width:200px;
+        float:left;
+        background: #FFC;
+        margin: 10px;
+        min-height: 700px;
+    }
+    #sideMenu ul li{
+        list-style: none;
+        padding: 5px;
+        border-bottom: 1px dotted #CCC;
+    }
+    #masterContent{
+        background: #FFF;
+        float: left;
+        width: 760px;
+        padding: 10px;
+        margin: 10px;
+    }
+    #masterContent ol{
+        margin-left: 20px;
+    }
+    #masterContent pre{
+        background: #EEE;
+        color:blue;
+        padding:10px;
+        width: 96%;
+        display: inline-block;
+        overflow: auto;
+        font-size: 85%;
+    }
+    .note{
+        color:red;
+    }
+    #footer{
+        text-align: center;
+        padding: 20px;
+        font-size: 85%;
+        background: #666;
+        color:#FFF;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <h1>Demo Print Preview specific object with applied css</h1>
+        <p>header will not be printed</p>
+    </div>
+    <div id="content">
+        <div id="sideMenu">
+            <ul>
+                <li>Home</li>
+                <li>About Alam</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div id="masterContent">
+            <h2>This section will be printed</h2>
+            <p>Consider this white area is the section we want to print, not the whole page</p>
+            <p>
+                Just assign id attribute to this section like in this example its id="masterContent"
+                <pre> &lt;div id="masterContent"> </pre>
+                in head section
+            <ol>
+                <li>
+                    Include JQuery library as
+                    <pre>&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">&lt;/script></pre>
+                    or include your local copy
+                </li>
+                <li>
+                    Include printPreview library as
+                    <pre>&lt;script type="text/javascript" src="js/printPreview.js">&lt;/script></pre>
+                </li>
+                <li>
+                    write one more script tag without src attribute for our JQuery section to initiate our Plugin as below
+<pre>&lt;script type="text/javascript">
+        $(function(){
+            $("#btnPrint").printPreview({
+                obj2print:'#masterContent',
+                width:'810'
+                <span style="color:#999;">
+                /*optional properties with default values*/
+                //obj2print:'body',     /*if not provided full page will be printed*/
+                //style:'',             /*if you want to override or add more css assign here e.g: "&lt;style>#masterContent:background:red;&lt;/style>"*/
+                //width: '670',         /*if width is not provided it will be 670 (default print paper width)*/
+                //height:screen.height, /*if not provided its height will be equal to screen height*/
+                //top:0,                /*if not provided its top position will be zero*/
+                //left:'center',        /*if not provided it will be at center, you can provide any number e.g. 300,120,200*/
+                //resizable : 'yes',    /*yes or no default is yes, * do not work in some browsers*/
+                //scrollbars:'yes',     /*yes or no default is yes, * do not work in some browsers*/
+                //status:'no',          /*yes or no default is yes, * do not work in some browsers*/
+                //title:'Print Preview' /*title of print preview popup window*/
+                </span>
+            });
+        });
+    &lt;/script></pre>
+                </li>
+            </ol>
+            </p>
+            <p class="note">
+                <b>Note:</b> Note 2 things
+                <ol class="note">
+                    <li>CSS is same here in this page</li>
+                    <li>althought the "print Preview" button resides within the target object which we are printing, but this will not be displayed in print/preview.</li>
+
+                </ol>
+            </p>
+            <button id="btnPrint">Print Preview</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="footer">
+        copyrights &copy; alamnaryab@gmail.com
+    </div>
+</body>
+</html>
