@@ -7,7 +7,7 @@ Consider we have div at our page with id="masterContent" we want to print only t
  in head section
 Include JQuery library as 
 
-&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">&lt; /script>
+<code><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></code>
 
 or include your local copy
 
