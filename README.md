@@ -2,21 +2,28 @@
 JQuery plugin to print preview specific div,p or any other object with css applied
 
 Consider we have div at our page with id="masterContent" we want to print only that div
+-----------------
  &lt;div id="masterContent"> 
- 
+-----------------
+
  in head section
 Include JQuery library as 
 
+-----------------
 &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> &lt;/script>
+-----------------
 
 or include your local copy
 
 Include printPreview library as 
 
+-----------------
 &lt;script type="text/javascript" src="js/printPreview.js">&lt;/script>
+-----------------
 
 write one more script tag without src attribute for our JQuery section to initiate our Plugin as below 
 
+-----------------
   &lt;script type="text/javascript">
         $(function(){
         
@@ -40,4 +47,6 @@ write one more script tag without src attribute for our JQuery section to initia
             });
         });
  &lt;/script>
+-----------------
+
 if you have "print Preview" button residing within the target object which we are printing, that button will not be displayed in print/preview.
